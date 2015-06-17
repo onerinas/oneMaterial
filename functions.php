@@ -106,9 +106,16 @@ add_action( 'widgets_init', 'onematerial_widgets_init' );
  */
 function onematerial_scripts() {
 	wp_enqueue_style( 'onematerial-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'onematerial-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
+// Add Material scripts and styles
+	if( !is_admin()){
+		
+		wp_deregister_script('jquery');
+		wp_enqueue_script( 'material-jquery', 'http://code.jquery.com/jquery-2.1.3.min.js', array(), '1.0', false );
+	
+	}
+	wp_enqueue_script( 'material-script', get_template_directory_uri() . '/js/bin/materialize.js', array(), '1.0', false );	
+	wp_enqueue_script( 'material-custom', get_template_directory_uri() . '/js/material-custom-scripts.js', array(), '1.0', false );
+ 
 	wp_enqueue_script( 'onematerial-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -1,45 +1,78 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
+===========
 
-_s
-===
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Materialize, a CSS Framework based on material design
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+### Current Version : v0.96.0
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+## Sass Requirements:
+- Ruby Sass 3.3+, LibSass 0.6+
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A sample custom header implementation in `inc/custom-header.php` that can be activated by uncommenting one line in `functions.php` and adding the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+## Supported Browsers:
+Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
-Getting Started
----------------
+## Contributing
+- Compiling Files
+  - `npm install`
+  - `grunt monitor`, this will compile .scss, .js., .jade files
+- Documentation
+  - If you notice an error in the documentation, please edit the corresponding .html page under jade/page-contents/.
+- Issues
+  - If you have an issue please make sure you document the problems in depth. One line issues with no explanations will be closed.
+- Feature Requests
+  - We like feature requests but make sure that it can be seen within the goals of the project and not just something you need individually. Also you should try and give as much examples and details about the new feature as possible.
+- Code Examples
+  - Use this [codepen](http://codepen.io/Dogfalo/pen/xbzPQV) to illustrate your problem.
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+## Changelog
+- v0.96.0 (April 1, 2015)
+  - **Toasts, transitions, scrollfire added under Materialize namespace**
+  - **Dropdown is now created as a child of its parent**
+  - Collapsibles supports nesting
+  - Modal Bottom Sheet added
+  - Indeterminate Checkboxes added
+  - New Checkbox Style Added
+  - Text Inputs supports placeholder/readonly
+  - Google Inbox-like Collapsible added
+  - Text Character Counter added
+  - Waves no longer breaks on SVG's
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium`), and then you'll need to do a five-step find and replace on the name in all the templates.
+- v0.95.3 (Feb 25, 2015)
+  - Parallax image loading / responsiveness fixes
+  - Date picker supports month/year as dropdown
+  - Dismissable collection items
+  - Avatar collection items
+  - Pagination Added
+  - ScrollFire fixes
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in style.css.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+- v0.95.2 (Feb 10, 2015)
+  - Switches added
+  - Transition animation functions added
+  - ScrollFire Plugin added (fires functions dependent on scroll position)
+  - Responsive Video tag added
+  - Custom File Input Button added
+  - Modals has a fixed footer option
+  - SideNav implementation changed (needs 2 UL menus)
+  - Slider Responsive Fixes
 
-OR
+- v0.95.1 (Jan 26, 2015)
+  - Sidenav Fixes
+  - Dropdown alignment/gutter options added
+  - Parallax fixes
+  - JavaScript Initialization no longer needed for many components
+  - HTML options through data-attributes
+  - Site colors can be defined through Primary and Secondary color in Sass
+  - Tables no longer resonsive by default
 
-* Search for: `'_s'` and replace with: `'megatherium'`
-* Search for: `_s_` and replace with: `megatherium_`
-* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
-* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_s-` and replace with: `megatherium-`
-
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+- v0.95.0 (Jan 17, 2015)
+  - Drag Out Menu fixed with Touch Interactions
+  - Toasts minor bugfix
+  - OL element has default styling
+  - Fullscreen Slider added
+  - Footer requires page-footer class
+  - Progress Bars added
+  - Form autofill support added
+  - Responsive Tables support added
+  - Scrollspy Plugin released
+  - Waves events are now delegated / behavior enhanced
