@@ -7,6 +7,6 @@ jQuery(document).ready(function ($) {
     }
   );
  
- 
+ $('#site-navigation li').addClass('waves-effect waves-light');
 });
  
